@@ -25,8 +25,8 @@ class AuthManager {
     
     private init() {}
     
-    let client = SupabaseClient(supabaseURL: URL(string: "https://nprgwzieebaphviuchba.supabase.co")!,
-                                supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wcmd3emllZWJhcGh2aXVjaGJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE0MzMxNTgsImV4cCI6MjAyNzAwOTE1OH0.t2218judh_d39AF2iKuS9NMMiiMCjIn7IdnEGLafqxk")
+    let client = SupabaseClient(supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
+                                supabaseKey: "YOUR_SUPABASE_KEY")
     
     func getCurrentSession() async throws  -> AppUser{
         let session = try await client.auth.session
