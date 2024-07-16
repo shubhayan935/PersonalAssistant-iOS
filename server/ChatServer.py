@@ -3,8 +3,8 @@ import openai
 from openai import OpenAI
 from supabase import create_client, Client
 
-url: str = "https://nprgwzieebaphviuchba.supabase.co"
-key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wcmd3emllZWJhcGh2aXVjaGJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE0MzMxNTgsImV4cCI6MjAyNzAwOTE1OH0.t2218judh_d39AF2iKuS9NMMiiMCjIn7IdnEGLafqxk"
+url: str = "YOUR_SUPABASE_URL"
+key: str = "YOUR_SUPABASE_KEY"
 supabase: Client = create_client(url, key)
 
 app = Flask(__name__)
@@ -83,8 +83,7 @@ def message():
 
     print(messages_list)
 
-    client = OpenAI(api_key = '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')
-    # openai.api_key = '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'
+    client = OpenAI(api_key = 'YOUR_OPENAI_API_KEY')
     # This sends the message to OpenAI's API
     response = client.chat.completions.create(
     model="gpt-3.5-turbo",
