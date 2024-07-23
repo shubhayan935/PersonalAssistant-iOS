@@ -16,7 +16,6 @@ print(result['text'])
 
 
 
-
 openai.api_key = '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'
 
 def analyze_transcript(transcript):
