@@ -1,5 +1,3 @@
-
-
 import whisper
 import openai
 
